@@ -133,7 +133,7 @@ class Users(Resource):
         payload = {}
         payload["currentEmail"] = str(current_email)
         payload["newEmail"] = str(new_email)
-        payload['merge'] = bool(merge)
+        payload["merge"] = bool(merge)
         return self.client.post(resource, data=payload)
 
     def bulk_update(self, users):
